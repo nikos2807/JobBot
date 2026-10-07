@@ -1,6 +1,0 @@
-@JobBot_HostAddress = http://localhost:5063
-
-GET {{JobBot_HostAddress}}/weatherforecast/
-Accept: application/json
-
-###

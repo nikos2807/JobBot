@@ -1,0 +1,19 @@
+services:
+  postgres:
+    image: postgres:18
+    container_name: jobbot-postgres
+    restart: unless-stopped
+
+    environment:
+      POSTGRES_DB: jobbot
+      POSTGRES_USER: jobbot_user
+      POSTGRES_PASSWORD: jobbot_password
+
+    ports:
+      - "5436:5432"
+
+    volumes:
+      - jobbot_postgres_data:/var/lib/postgresql
+
+volumes:
+  jobbot_postgres_data:
